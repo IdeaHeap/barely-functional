@@ -18,7 +18,7 @@ trouble, so here it is, I wrapped the calls to guava's immutable list builder to
 lifting for me. I'm sick of typing ImmutableList.of(), and I want to use ImmutableMap.of(),
 so this is just no good.
 
-Here it is, I'm drawing a line in the Java sand. I'm claiming the letter l for lists.
+Here it is, I'm drawing a line in the Java sand. 
 
         final List<Integer> ints = list(1, 2, 3, 4)); // [1, 2, 3, 4]
         final List<Integer> moreInts = push(ints, 5); // [1, 2, 3, 4, 5]
@@ -31,9 +31,8 @@ this hard?
 
 # Maps
 
-I love guava maps! But once again, I am sick of typing ImmutableMap.of(), let's draw yet
-another line in the sand! I'm claiming m for maps! And i want arbitrary numbers of entries!
-And I want those entries to be succinct! So here's the plan, we're taking the letter e too.
+I love guava maps! But once again, I am sick of typing ImmutableMap.of()!  And i want arbitrary numbers of entries!
+And I want those entries to be succinct! So here's the plan, we're taking the letter e.
 
     Map<String, Integer> vals = map(e("a",1), e("b", 2)); // { "a" : 1, "b" : 2 }
     Map<String, Integer> moreVals = assoc(vals, e("c", 3)); // { "a" : 1, "b" : 2, "c" : 3 }
@@ -43,7 +42,7 @@ And I want those entries to be succinct! So here's the plan, we're taking the le
 
 # Sets
 
-This is just like everything else. I'm taking a letter.
+This is just like everything else. 
 
     Set<Integer> ints = set(1, 2, 3); // (1, 2, 3)
     Set<Integer> ints2 = assoc(ints, 4, 5); // (1, 2, 3, 4, 5)

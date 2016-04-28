@@ -20,7 +20,7 @@ so this is just no good.
 
 Here it is, I'm drawing a line in the Java sand. I'm claiming the letter l for lists.
 
-        final List<Integer> ints = l(1, 2, 3, 4)); // [1, 2, 3, 4]
+        final List<Integer> ints = list(1, 2, 3, 4)); // [1, 2, 3, 4]
         final List<Integer> moreInts = push(ints, 5); // [1, 2, 3, 4, 5]
         final List<Integer> evenMore = unshift(ints, -1, 0); // [ -1, 0, 1, 2, 3, 4, 5]
         final List<Integer> firstNumberIsTwo = assoc(ints, 0, 2); // [ 2, 0, 1, 2, 3, 4, 5]
@@ -35,7 +35,7 @@ I love guava maps! But once again, I am sick of typing ImmutableMap.of(), let's 
 another line in the sand! I'm claiming m for maps! And i want arbitrary numbers of entries!
 And I want those entries to be succinct! So here's the plan, we're taking the letter e too.
 
-    Map<String, Integer> vals = m(e("a",1), e("b", 2)); // { "a" : 1, "b" : 2 }
+    Map<String, Integer> vals = map(e("a",1), e("b", 2)); // { "a" : 1, "b" : 2 }
     Map<String, Integer> moreVals = assoc(vals, e("c", 3)); // { "a" : 1, "b" : 2, "c" : 3 }
     Map<String, Integer> changeVals = assoc(vals, e("a", 3)); // { "a" : 3, "b" : 2, "c" : 3 }
     Map<String, Integer> changeVals = assoc(vals, "b", 3); // { "a" : 3, "b" : 3, "c" : 3 }
@@ -45,7 +45,7 @@ And I want those entries to be succinct! So here's the plan, we're taking the le
 
 This is just like everything else. I'm taking a letter.
 
-    Set<Integer> ints = s(1, 2, 3); // (1, 2, 3)
+    Set<Integer> ints = set(1, 2, 3); // (1, 2, 3)
     Set<Integer> ints2 = assoc(ints, 4, 5); // (1, 2, 3, 4, 5)
     Set<Integer> union = union(ints, ints2) // (1, 2, 3, 4, 5)
     Set<Integer> inter = intersection(ints, ints2) // (1, 2, 3)

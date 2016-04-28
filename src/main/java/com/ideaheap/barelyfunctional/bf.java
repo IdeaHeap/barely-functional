@@ -138,6 +138,20 @@ public class Bf {
         return builder.build();
     }
 
+    public static <K, V> Map<K, V> dissoc(Map<K, V>map, K ... keys) {
+        Map<K, V> comboMap = new HashMap<K, V>();
+        comboMap.putAll(map);
+        for (K key : keys) {
+            if (comboMap.containsKey(key)) {
+                comboMap.remove(key);
+            }
+        }
+
+        ImmutableMap.Builder<K, V> builder = ImmutableMap.builder();
+        builder.putAll(comboMap);
+        return builder.build();
+    }
+
     public static <K, V> Map<K, V> m(Map.Entry<K, V>... entries) {
         ImmutableMap.Builder<K, V> builder = ImmutableMap.builder();
 

@@ -55,6 +55,7 @@ public class BfTest {
                 m(e("b", 2), e("c", 3))
             )
         );
+        assertEquals(m(e("a", 1)), dissoc(m(e("a", 1), e("b", 2)), "b"));
     }
 
     @Test

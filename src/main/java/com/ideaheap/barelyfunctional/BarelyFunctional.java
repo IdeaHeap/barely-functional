@@ -10,7 +10,7 @@ import java.util.*;
 /**
  * Created by nwertzberger on 4/27/16.
  */
-public class Bf {
+public class BarelyFunctional {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // Lists
@@ -22,7 +22,7 @@ public class Bf {
      * @param <T>
      * @return
      */
-    public static <T> List<T> l(
+    public static <T> List<T> list(
         T... elements
     ) {
         return ImmutableList.copyOf(elements);
@@ -152,7 +152,7 @@ public class Bf {
         return builder.build();
     }
 
-    public static <K, V> Map<K, V> m(Map.Entry<K, V>... entries) {
+    public static <K, V> Map<K, V> map(Map.Entry<K, V>... entries) {
         ImmutableMap.Builder<K, V> builder = ImmutableMap.builder();
 
         for (Map.Entry<K, V> entry : entries) {
@@ -169,7 +169,7 @@ public class Bf {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // Sets
 
-    public static <T> Set<T> s(T... values) {
+    public static <T> Set<T> set(T... values) {
         ImmutableSet.Builder<T> builder = ImmutableSet.builder();
         builder.add(values);
         return builder.build();

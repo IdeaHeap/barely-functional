@@ -37,7 +37,8 @@ And I want those entries to be succinct! So here's the plan, we're taking the le
     Map<String, Integer> vals = map(e("a",1), e("b", 2)); // { "a" : 1, "b" : 2 }
     Map<String, Integer> moreVals = assoc(vals, e("c", 3)); // { "a" : 1, "b" : 2, "c" : 3 }
     Map<String, Integer> changeVals = assoc(vals, e("a", 3)); // { "a" : 3, "b" : 2, "c" : 3 }
-    Map<String, Integer> changeVals = assoc(vals, "b", 3); // { "a" : 3, "b" : 3, "c" : 3 }
+    Map<String, Integer> changeVals2 = assoc(vals, "b", 3); // { "a" : 3, "b" : 3, "c" : 3 }
+    Map<String, Integer> changeVals3 = dissoc(vals, "b"); // { "a" : 3, "c" : 3 }
 
 
 # Sets

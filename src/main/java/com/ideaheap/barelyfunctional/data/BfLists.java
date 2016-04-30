@@ -54,6 +54,37 @@ public class BfLists {
     }
 
     /**
+     * Return an updated list with the specified value at the specified index removed.
+     *
+     * @param list The list to create a new version of
+     * @param idx the index for the value
+     * @return An updated list with the value at the specified position removed.
+     */
+    public static <T> List<T> dissoc(List<T> list, int idx) {
+        return (List<T>) ImmutableList
+            .builder()
+            .addAll(list.subList(0, idx))
+            .addAll(list.subList(idx + 1, list.size()))
+            .build();
+    }
+
+    /**
+     * Return an updated list with the specified value at the specified index inserted.
+     *
+     * @param list The list to create a new version of
+     * @param idx the index for the value
+     * @return An updated list with the value at the specified position inserted.
+     */
+    public static <T> List<T> insert(List<T> list, int idx, T val) {
+        return (List<T>) ImmutableList
+            .builder()
+            .addAll(list.subList(0, idx))
+            .add(val)
+            .addAll(list.subList(idx, list.size()))
+            .build();
+    }
+
+    /**
      * Add elements to the end of a list.
      * @param list The list to add to.
      * @param end The elements to add.

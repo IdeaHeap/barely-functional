@@ -60,7 +60,7 @@ public class BfLists {
      * @param idx the index for the value
      * @return An updated list with the value at the specified position removed.
      */
-    public static <T> List<T> dissoc(List<T> list, int idx) {
+    public static <T> List<T> remove(List<T> list, int idx) {
         return (List<T>) ImmutableList
             .builder()
             .addAll(list.subList(0, idx))

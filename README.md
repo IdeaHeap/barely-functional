@@ -20,10 +20,12 @@ so this is just no good.
 
 Here it is, I'm drawing a line in the Java sand. 
 
-        final List<Integer> ints = list(1, 2, 3, 4)); // [1, 2, 3, 4]
-        final List<Integer> moreInts = push(ints, 5); // [1, 2, 3, 4, 5]
-        final List<Integer> evenMore = unshift(ints, -1, 0); // [ -1, 0, 1, 2, 3, 4, 5]
-        final List<Integer> firstNumberIsTwo = assoc(ints, 0, 2); // [ 2, 0, 1, 2, 3, 4, 5]
+        List<Integer> ints = list(1, 2, 3, 4)); // [1, 2, 3, 4]
+        List<Integer> moreInts = push(ints, 5); // [1, 2, 3, 4, 5]
+        List<Integer> evenMore = unshift(ints, -1, 0); // [ -1, 0, 1, 2, 3, 4, 5]
+        List<Integer> firstNumberIsTwo = assoc(ints, 0, 2); // [ 2, 0, 1, 2, 3, 4, 5]
+        List<Integer> oneRemoved = remove(ints, 2); // [1, 2, 4]
+        List<Integer> oneInserted = insert(ints, 1, 6); //  [1, 6, 2, 3, 4]
 
 Let's also actually make it easy to get new lists with changed elements! Why do we make
 this hard?
@@ -47,6 +49,7 @@ This is just like everything else.
 
     Set<Integer> ints = set(1, 2, 3); // (1, 2, 3)
     Set<Integer> ints2 = assoc(ints, 4, 5); // (1, 2, 3, 4, 5)
+    Set<Integer> ints3 = dissoc(ints, 2, 3); // (1)
     Set<Integer> union = union(ints, ints2) // (1, 2, 3, 4, 5)
     Set<Integer> inter = intersection(ints, ints2) // (1, 2, 3)
     Set<Integer> xor = xor(ints, ints2) // (4, 5)

@@ -3,7 +3,10 @@ package com.ideaheap.barelyfunctional.data;
 import com.google.common.collect.ImmutableList;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 /**
  * An immutable list library. Convenience functions for dealing with lists.
@@ -17,10 +20,11 @@ public class BfLists {
      * @return An immutable list of the elements presented.
      */
     public static <T> List<T> list(
-        T ... elements
+        T... elements
     ) {
         return ImmutableList.copyOf(elements);
     }
+
 
     /**
      * combine all collections given into one immutable list. Collections are added in order.
@@ -40,8 +44,8 @@ public class BfLists {
      * Return an updated list with the specified value at the specified index.
      *
      * @param list The list to create a new version of
-     * @param idx the index for the value
-     * @param val the new value
+     * @param idx  the index for the value
+     * @param val  the new value
      * @return An updated list with the new value.
      */
     public static <T> List<T> assoc(List<T> list, int idx, T val) {
@@ -57,7 +61,7 @@ public class BfLists {
      * Return an updated list with the specified value at the specified index removed.
      *
      * @param list The list to create a new version of
-     * @param idx the index for the value
+     * @param idx  the index for the value
      * @return An updated list with the value at the specified position removed.
      */
     public static <T> List<T> remove(List<T> list, int idx) {
@@ -72,7 +76,7 @@ public class BfLists {
      * Return an updated list with the specified value at the specified index inserted.
      *
      * @param list The list to create a new version of
-     * @param idx the index for the value
+     * @param idx  the index for the value
      * @return An updated list with the value at the specified position inserted.
      */
     public static <T> List<T> insert(List<T> list, int idx, T val) {
@@ -86,8 +90,9 @@ public class BfLists {
 
     /**
      * Add elements to the end of a list.
+     *
      * @param list The list to add to.
-     * @param end The elements to add.
+     * @param end  The elements to add.
      * @return A new list with the elements specified added to the end.
      */
     public static <T> List<T> push(List<T> list, T... end) {

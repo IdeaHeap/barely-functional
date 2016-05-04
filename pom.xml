@@ -4,7 +4,7 @@
 
     <groupId>com.ideaheap.barelyfunctional</groupId>
     <artifactId>barely-functional</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
 
     <name>Barely Functional</name>
@@ -32,7 +32,7 @@
         <url>git@github.com:IdeaHeap/barely-functional.git</url>
         <connection>scm:git:git@github.com:IdeaHeap/barely-functional.git</connection>
         <developerConnection>scm:git:git@github.com:IdeaHeap/barely-functional.git</developerConnection>
-        <tag>barely-functional-0.0.1</tag>
+        <tag>barely-functional-0.0.2</tag>
     </scm>
 
     <distributionManagement>

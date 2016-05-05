@@ -33,7 +33,7 @@ so this is just no good.
 
 Here it is, I'm drawing a line in the Java sand. 
 
-        List<Integer> ints = list(1, 2, 3, 4)); // [1, 2, 3, 4]
+        List<Integer> ints = list(1, 2, 3, 4); // [1, 2, 3, 4]
         List<Integer> moreInts = push(ints, 5); // [1, 2, 3, 4, 5]
         List<Integer> evenMore = unshift(ints, -1, 0); // [ -1, 0, 1, 2, 3, 4, 5]
         List<Integer> firstNumberIsTwo = assoc(ints, 0, 2); // [ 2, 0, 1, 2, 3, 4, 5]

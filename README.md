@@ -86,9 +86,9 @@ And just like everything else, this library made sure things are fully immutable
 
 # Memoization
 
-The more specific application of cacheing, memoization is a technique for returning the value to
-a function call if you already have it. This is especially useful if you are trying to improve
-performance for an expensive call. Because memoization is usually to frontend expensive function
+Memoization is a more specific application of cacheing. It is a technique for returning the value to
+a function call if you have already calculated it before. This is especially useful if you are trying to improve
+performance for an expensive call. Because memoization is usually used to frontend expensive function
 calls, the default implementation uses weak value references to do this. This is due to some
 cleanup issues I was seeing with soft references.
 
